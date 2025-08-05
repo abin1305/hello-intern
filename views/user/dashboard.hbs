@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - InternImpact</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Finternimpa1369back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.6"></script>
+</head>
+<body class="bg-background">
+    <!-- Navigation Header -->
+    <nav class="bg-surface shadow-sm border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="homepage.html" class="flex items-center space-x-2">
+                        
+                        <span class="text-xl font-bold text-primary font-accent">Hellointern</span>
+                    </a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="text-text-secondary hover:text-primary transition-smooth">Home</a>
+                     <a href="intern_dashboard.html" class="text-primary font-semibold">Dashboard</a>
+                    <a href="/leaderboard" class="text-text-secondary hover:text-primary transition-smooth">Leaderboard</a>
+                   
+                </div>
+                
+                <!-- User Profile -->
+                <div class="flex items-center space-x-4">
+                    <!-- Notifications -->
+                   
+                    <!-- Profile Dropdown -->
+                    <div class="relative">
+                        <button id="profileDropdownBtn" class="flex items-center space-x-2 focus:outline-none">
+<img src="https://images.unsplash.com/photo-1494790108755-2616c9c0e5b5?q=80&w=2787&auto=format&fit=crop" alt="Sarah Chen" class="w-8 h-8 rounded-full object-cover" onerror="this.src='https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                            <span class="text-text-primary font-semibold"> {{name}}</span>
+                            <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div id="profileDropdownMenu" class="hidden absolute right-0 mt-2 w-40 bg-white border border-gray-200 rounded-md shadow-lg z-50">
+                            <a href="/logout" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Logout</a>
+                        </div>
+                    </div>
+                </div>
+               
+                
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button class="text-gray-500 hover:text-primary">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+<!-- Welcome Section -->
+<div class="mb-8">
+  <div class="flex items-center justify-between">
+    <div>
+      <h1 class="text-3xl font-bold text-text-primary font-accent">Welcome back, {{name}}!</h1>
+      <p class="text-text-secondary mt-2">You're making incredible progress on your journey</p>
+    </div>
+  </div>
+</div>
+
+<!-- Campaign Statistics Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+
+  <!-- Total Rewards -->
+  <div class="card">
+    <div class="flex items-center justify-between">
+      <div>
+        <p class="text-text-secondary text-sm font-medium">Total Rewards Raised</p>
+        <p class="text-3xl font-bold text-primary font-accent">${{rewards}}</p>
+      </div>
+      <div class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center">
+        <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- Leaderboard Position -->
+  <div class="card">
+    <div class="flex items-center justify-between">
+      <div>
+        <p class="text-text-secondary text-sm font-medium">Leaderboard Position</p>
+        <p class="text-3xl font-bold text-accent font-accent">#{{position}}</p>
+      </div>
+      <div class="w-12 h-12 bg-accent-100 rounded-full flex items-center justify-center">
+        <svg class="w-6 h-6 text-accent" fill="currentColor" viewBox="0 0 20 20">
+          <path d="..."/>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- First Donation -->
+  <div class="card">
+    <div class="flex items-center justify-between">
+      <div>
+        <p class="text-text-secondary text-sm font-medium">First Donation</p>
+        <p class="text-3xl font-bold text-accent font-accent">${{donation}}</p>
+      </div>
+      <div class="w-12 h-12 bg-accent-100 rounded-full flex items-center justify-center">
+        <svg class="w-6 h-6 text-accent" fill="currentColor" viewBox="0 0 20 20">
+          <path d="..."/>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- Days Active -->
+  <div class="card">
+    <div class="flex items-center justify-between">
+      <div>
+        <p class="text-text-secondary text-sm font-medium">Days Active</p>
+        <p class="text-3xl font-bold text-accent font-accent">{{active}}</p>
+      </div>
+      <div class="w-12 h-12 bg-accent-100 rounded-full flex items-center justify-center">
+        <svg class="w-6 h-6 text-accent" fill="currentColor" viewBox="0 0 20 20">
+          <path d="..."/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Referral Tools -->
+<div class="card mt-10">
+  <h2 class="text-xl font-semibold text-text-primary mb-6">Referral Tools</h2>
+  <div class="bg-gray-50 rounded-lg p-4 mb-6">
+    <div class="flex items-center justify-between">
+      <div>
+        <label class="text-sm font-medium text-text-secondary">Your Referral Code</label>
+        <div class="text-lg font-mono font-bold text-primary">{{reference}}</div>
+      </div>
+      <button class="btn-primary text-sm py-2 px-4" onclick="copyReferralCode()">
+        <svg class="w-4 h-4 mr-2 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="..." />
+        </svg>
+        Copy Code
+      </button>
+    </div>
+  </div>
+</div>
+
+
+            <!-- Right Column - Notifications, Achievements, Quick Actions -->
+            <div class="space-y-8">
+                <!-- Real-time Notifications -->
+             
+                <!-- Achievement Badges -->
+                <div class="card">
+                    <div class="flex items-center justify-between mb-4">
+                        <h2 class="text-lg font-semibold text-text-primary">Achievements</h2>
+                    </div>
+                    
+                    <div class="grid grid-cols-3 gap-3">
+                        <!-- Earned Badge -->
+                        <div class="text-center p-3 bg-secondary-50 rounded-lg">
+                            <div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center mx-auto mb-2">
+                                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                            </div>
+                                                        <p class="text-xs font-medium text-secondary">Superstar Intern</p>
+
+                            <p class="text-xs font-medium text-secondary">unlocked</p>
+                        </div>
+                        
+                        <!-- Earned Badge -->
+                        <div class="text-center p-3 bg-primary-50 rounded-lg">
+                            <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mx-auto mb-2">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                                </svg>
+                            </div>
+                            <p class="text-xs font-medium text-primary">Bronze Tier Swag</p>
+                              <p class="text-xs font-medium text-primary">unlocked</p>
+                        </div>
+                        
+                        <!-- Progress Badge -->
+                        <div class="text-center p-3 bg-gray-100 rounded-lg relative">
+                            <div class="w-12 h-12 bg-gray-400 rounded-full flex items-center justify-center mx-auto mb-2">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                                </svg>
+                            </div>
+                            <p class="text-xs font-medium text-gray-600">Silver Tier Swag</p>
+                            <div class="absolute inset-0 bg-gray-200 bg-opacity-50 rounded-lg flex items-center justify-center">
+                                <div class="text-xs font-semibold text-gray-700">locked</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- Quick Actions -->
+                    
+
+                <!-- Rewards Preview -->
+               
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Trust Signals -->
+           
+            
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                       
+                        <span class="text-lg font-bold font-accent">Hellointern</span>
+                    </div>
+                    <p class="text-gray-400 text-sm mb-4">The Intern Impact Portal is your personal dashboard to track and showcase your contribution as an intern ambassador.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-smooth">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                        </a>
+                     
+                        <a href="#" class="text-gray-400 hover:text-white transition-smooth">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Platform</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="campaign_profiles.html" class="text-gray-400 hover:text-white transition-smooth">Home</a></li>
+                        <li><a href="intern_dashboard.html" class="text-gray-400 hover:text-white transition-smooth">Dashboard</a></li>
+                        <li><a href="leaderboard.html" class="text-gray-400 hover:text-white transition-smooth">Leaderboard</a></li>
+
+                    </ul>
+                </div>
+                
+                <!-- Support -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Support</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-smooth">Help Center</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-smooth">Contact Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-smooth">Safety Guidelines</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Legal -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Legal</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-smooth">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-smooth">Terms of Service</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-smooth">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Security Badges -->
+            <div class="border-t border-gray-800 pt-8 mt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                   
+                    <p class="text-sm text-gray-400 text-center w-full">© 2025 InternImpact. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- JavaScript for Interactive Features -->
+    <script>
+
+          // Profile dropdown toggle
+                    document.addEventListener('DOMContentLoaded', function () {
+                        const btn = document.getElementById('profileDropdownBtn');
+                        const menu = document.getElementById('profileDropdownMenu');
+                        btn.addEventListener('click', function (e) {
+                            e.stopPropagation();
+                            menu.classList.toggle('hidden');
+                        });
+                        document.addEventListener('click', function () {
+                            menu.classList.add('hidden');
+                        });
+                    });
+        // Copy referral code functionality
+        function copyReferralCode() {
+            const referralCode = 'SARAH-WATER-2025';
+            navigator.clipboard.writeText(referralCode).then(() => {
+                // Show success feedback
+                const button = event.target.closest('button');
+                const originalText = button.innerHTML;
+                button.innerHTML = '<svg class="w-4 h-4 mr-2 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Copied!';
+                button.classList.add('bg-secondary', 'hover:bg-secondary-700');
+                button.classList.remove('bg-primary', 'hover:bg-primary-700');
+                
+                setTimeout(() => {
+                    button.innerHTML = originalText;
+                    button.classList.remove('bg-secondary', 'hover:bg-secondary-700');
+                    button.classList.add('bg-primary', 'hover:bg-primary-700');
+                }, 2000);
+            });
+        }
+
+        // Animate progress bars on page load
+        window.addEventListener('load', () => {
+            const progressBars = document.querySelectorAll('.progress-bar');
+            progressBars.forEach(bar => {
+                const width = bar.style.width;
+                bar.style.width = '0%';
+                setTimeout(() => {
+                    bar.style.width = width;
+                }, 500);
+            });
+        });
+
+        // Add celebration animation to milestone achievements
+        function celebrateMilestone() {
+            const milestoneCard = document.querySelector('.bg-secondary-50');
+            if (milestoneCard) {
+                milestoneCard.classList.add('animation-celebration');
+                setTimeout(() => {
+                    milestoneCard.classList.remove('animation-celebration');
+                }, 500);
+            }
+        }
+
+        // Simulate real-time notifications
+        function addNotification(type, message, time) {
+            const notificationContainer = document.querySelector('.space-y-4');
+            const notification = document.createElement('div');
+            
+            let bgColor, iconColor, icon;
+            switch(type) {
+                case 'donation':
+                    bgColor = 'bg-secondary-50';
+                    iconColor = 'bg-secondary';
+                    icon = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"/>';
+                    break;
+                case 'achievement':
+                    bgColor = 'bg-primary-50';
+                    iconColor = 'bg-primary';
+                    icon = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>';
+                    break;
+                default:
+                    bgColor = 'bg-accent-50';
+                    iconColor = 'bg-accent';
+                    icon = '<path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>';
+            }
+            
+            notification.innerHTML = `
+                <div class="flex items-start space-x-3 p-3 ${bgColor} rounded-lg">
+                    <div class="w-8 h-8 ${iconColor} rounded-full flex items-center justify-center flex-shrink-0">
+                        <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            ${icon}
+                        </svg>
+                    </div>
+                    <div class="flex-1">
+                        <p class="text-sm font-medium text-text-primary">${message}</p>
+                        <p class="text-xs text-text-secondary">${time}</p>
+                    </div>
+                </div>
+            `;
+            
+            notificationContainer.insertBefore(notification, notificationContainer.firstChild);
+            
+            // Remove oldest notification if more than 5
+            if (notificationContainer.children.length > 5) {
+                notificationContainer.removeChild(notificationContainer.lastChild);
+            }
+        }
+
+        // Update notification badge count
+        function updateNotificationBadge(count) {
+            const badge = document.querySelector('.absolute.-top-1.-right-1');
+            if (badge) {
+                badge.textContent = count;
+            }
+        }
+
+        // Simulate periodic updates (for demo purposes)
+        setInterval(() => {
+            const notifications = [
+                { type: 'donation', message: 'New donation received!', time: 'Just now' },
+                { type: 'achievement', message: 'Achievement unlocked!', time: 'Just now' },
+                { type: 'leaderboard', message: 'Leaderboard position updated!', time: 'Just now' }
+            ];
+            
+            const randomNotification = notifications[Math.floor(Math.random() * notifications.length)];
+            // Uncomment the line below to enable periodic notifications
+            // addNotification(randomNotification.type, randomNotification.message, randomNotification.time);
+        }, 30000); // Every 30 seconds
+    </script>
+<script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+</body>
+</html>

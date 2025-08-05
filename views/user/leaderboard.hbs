@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leaderboard - InternImpact</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Finternimpa1369back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.6"></script>
+</head>
+<body class="bg-background">
+    <!-- Navigation Header -->
+    <nav class="bg-surface shadow-sm border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="homepage.html" class="flex items-center space-x-2">
+                       
+                        <span class="text-xl font-bold text-primary font-accent">Hellointern</span>
+                    </a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/" class="text-text-secondary hover:text-primary transition-smooth">Home</a>
+                    <a href="/dashboard" class="text-text-secondary hover:text-primary transition-smooth">Dashboard</a>
+                    <a href="/leaderboard" class="text-primary font-semibold">Leaderboard</a>
+                </div>
+                
+                <!-- CTA Buttons -->
+                 <div class="relative">
+                        
+                        <div id="profileDropdownMenu" class="hidden absolute right-0 mt-2 w-40 bg-white border border-gray-200 rounded-md shadow-lg z-50">
+                            <a href="/logout" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Logout</a>
+                        </div>
+                    </div>
+                
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button class="text-gray-500 hover:text-primary">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+   
+
+   
+
+    <!-- Full Leaderboard -->
+    <section class="py-12 bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-3xl font-bold text-text-primary">Complete Rankings</h2>
+                <div class="flex items-center space-x-2 text-sm text-text-secondary">
+                  
+                </div>
+            </div>
+            
+            <div class="space-y-4" id="leaderboard-list">
+                <!-- Rank 4 -->
+                <div class="leaderboard-card" data-rank="1">
+                    <div class="flex items-center justify-between p-6 bg-surface rounded-lg border border-gray-200 hover:shadow-elevated transition-all duration-300">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-10 h-10 bg-gray-100 text-gray-600 rounded-full flex items-center justify-center font-bold text-lg">1</div>
+                            <img src="https://images.pixabay.com/photo/2016/11/21/12/42/beard-1845166_1280.jpg" alt="Elena Rodriguez" class="w-14 h-14 rounded-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2940&auto=format&fit=crop'; this.onerror=null;" />
+                            <div>
+                                <h3 class="font-bold text-text-primary text-lg">Elena Rodriguez</h3>
+                                <p class="text-text-secondary">	Donations Raised</p>
+                               
+                            </div>
+                        </div>
+                        <div class="text-right">
+                            <div class="text-2xl font-bold text-secondary">$4,875</div>
+                           
+                        </div>
+                        <div class="ml-4">
+                            <a href="#" class="btn-primary text-sm px-4 py-2">View Campaign</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Rank 5 -->
+                <div class="leaderboard-card" data-rank="5">
+                    <div class="flex items-center justify-between p-6 bg-surface rounded-lg border border-gray-200 hover:shadow-elevated transition-all duration-300">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-10 h-10 bg-gray-100 text-gray-600 rounded-full flex items-center justify-center font-bold text-lg">2</div>
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2940&auto=format&fit=crop" alt="David Kim" class="w-14 h-14 rounded-full object-cover" onerror="this.src='https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                            <div>
+                                <h3 class="font-bold text-text-primary text-lg">David Kim</h3>
+                                <p class="text-text-secondary">Mental Health Support</p>
+                               
+                            </div>
+                        </div>
+                        <div class="text-right">
+                            <div class="text-2xl font-bold text-primary">$4,320</div>
+                           
+                        </div>
+                        <div class="ml-4">
+                            <a href="#" class="btn-primary text-sm px-4 py-2">View Campaign</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Rank 6 -->
+                <div class="leaderboard-card" data-rank="6">
+                    <div class="flex items-center justify-between p-6 bg-surface rounded-lg border border-gray-200 hover:shadow-elevated transition-all duration-300">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-10 h-10 bg-gray-100 text-gray-600 rounded-full flex items-center justify-center font-bold text-lg">3</div>
+                            <img src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Aisha Okafor" class="w-14 h-14 rounded-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1494790108755-2616c9c0e5b5?q=80&w=2787&auto=format&fit=crop'; this.onerror=null;" />
+                            <div>
+                                <h3 class="font-bold text-text-primary text-lg">Aisha Okafor</h3>
+                                <p class="text-text-secondary">Girls Education Africa</p>
+                               
+                            </div>
+                        </div>
+                        <div class="text-right">
+                            <div class="text-2xl font-bold text-accent">$3,950</div>
+                           
+                        </div>
+                        <div class="ml-4">
+                            <a href="#" class="btn-primary text-sm px-4 py-2">View Campaign</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Rank 7 -->
+                <div class="leaderboard-card" data-rank="7">
+                    <div class="flex items-center justify-between p-6 bg-surface rounded-lg border border-gray-200 hover:shadow-elevated transition-all duration-300">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-10 h-10 bg-gray-100 text-gray-600 rounded-full flex items-center justify-center font-bold text-lg">4</div>
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=2787&auto=format&fit=crop" alt="James Wilson" class="w-14 h-14 rounded-full object-cover" onerror="this.src='https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                            <div>
+                                <h3 class="font-bold text-text-primary text-lg">James Wilson</h3>
+                                <p class="text-text-secondary">Ocean Cleanup Project</p>
+                               
+                            </div>
+                        </div>
+                        <div class="text-right">
+                            <div class="text-2xl font-bold text-secondary">$3,680</div>
+                           
+                        </div>
+                        <div class="ml-4">
+                            <a href="#" class="btn-primary text-sm px-4 py-2">View Campaign</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Rank 8 -->
+                <div class="leaderboard-card" data-rank="8">
+                    <div class="flex items-center justify-between p-6 bg-surface rounded-lg border border-gray-200 hover:shadow-elevated transition-all duration-300">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-10 h-10 bg-gray-100 text-gray-600 rounded-full flex items-center justify-center font-bold text-lg">5</div>
+                            <img src="https://images.pixabay.com/photo/2017/06/26/02/47/man-2442565_1280.jpg" alt="Carlos Martinez" class="w-14 h-14 rounded-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2787&auto=format&fit=crop'; this.onerror=null;" />
+                            <div>
+                                <h3 class="font-bold text-text-primary text-lg">Carlos Martinez</h3>
+                                <p class="text-text-secondary">Community Garden Initiative</p>
+                                
+                            </div>
+                        </div>
+                        <div class="text-right">
+                            <div class="text-2xl font-bold text-secondary">$3,240</div>
+                           
+                        </div>
+                        <div class="ml-4">
+                            <a href="#" class="btn-primary text-sm px-4 py-2">View Campaign</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Rank 9 -->
+              
+                <!-- Rank 10 -->
+         
+            </div>
+            
+            <!-- Load More Button -->
+         
+        </div>
+    </section>
+
+    <!-- Rising Stars Section -->
+  
+
+    <!-- Achievement Categories -->
+   
+
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Trust Signals -->
+           
+            
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                       
+                        <span class="text-lg font-bold font-accent">Hellointern</span>
+                    </div>
+                    <p class="text-gray-400 text-sm mb-4">The Intern Impact Portal is your personal dashboard to track and showcase your contribution as an intern ambassador.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-smooth">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                        </a>
+                     
+                        <a href="#" class="text-gray-400 hover:text-white transition-smooth">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Platform</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-smooth">Home</a></li>
+                        <li><a href="intern_dashboard.html" class="text-gray-400 hover:text-white transition-smooth">Dashboard</a></li>
+                        <li><a href="leaderboard.html" class="text-gray-400 hover:text-white transition-smooth">Leaderboard</a></li>
+
+                    </ul>
+                </div>
+                
+                <!-- Support -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Support</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-smooth">Help Center</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-smooth">Contact Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-smooth">Safety Guidelines</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Legal -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Legal</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-smooth">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-smooth">Terms of Service</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-smooth">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Security Badges -->
+            <div class="border-t border-gray-800 pt-8 mt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                   
+                    <p class="text-sm text-gray-400 text-center w-full">© 2025 InternImpact. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- JavaScript for Interactive Features -->
+    <script>
+
+           document.addEventListener('DOMContentLoaded', function () {
+                        const btn = document.getElementById('profileDropdownBtn');
+                        const menu = document.getElementById('profileDropdownMenu');
+                        btn.addEventListener('click', function (e) {
+                            e.stopPropagation();
+                            menu.classList.toggle('hidden');
+                        });
+                        document.addEventListener('click', function () {
+                            menu.classList.add('hidden');
+                        });
+                    });
+        // Filter functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const timeFilter = document.querySelector('.time-filter');
+            const regionFilter = document.querySelector('.region-filter');
+            const causeFilter = document.querySelector('.cause-filter');
+            const leaderboardList = document.getElementById('leaderboard-list');
+            const loadMoreBtn = document.getElementById('load-more');
+            
+            // Filter button styling
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    // Simulate filtering (in real app, this would make API calls)
+                    const filterType = this.dataset.filter;
+                    console.log('Filtering by:', filterType);
+                    
+                    // Add loading animation
+                    leaderboardList.style.opacity = '0.5';
+                    setTimeout(() => {
+                        leaderboardList.style.opacity = '1';
+                    }, 500);
+                });
+            });
+            
+            // Dropdown filters
+            [timeFilter, regionFilter, causeFilter].forEach(filter => {
+                filter.addEventListener('change', function() {
+                    console.log('Filter changed:', this.value);
+                    // Simulate filtering
+                    leaderboardList.style.opacity = '0.5';
+                    setTimeout(() => {
+                        leaderboardList.style.opacity = '1';
+                    }, 500);
+                });
+            });
+            
+            // Load more functionality
+            loadMoreBtn.addEventListener('click', function() {
+                this.innerHTML = 'Loading...';
+                this.disabled = true;
+                
+                // Simulate loading more results
+                setTimeout(() => {
+                    this.innerHTML = 'Load More Rankings <svg class="w-4 h-4 ml-2 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>';
+                    this.disabled = false;
+                }, 1000);
+            });
+            
+            // Hover effects for leaderboard cards
+            const leaderboardCards = document.querySelectorAll('.leaderboard-card');
+            leaderboardCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-2px)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+            
+            // Animate counters on page load
+            function animateCounter(elementId, targetValue, duration = 2000) {
+                const element = document.getElementById(elementId);
+                if (!element) return;
+                
+                const startValue = 0;
+                const increment = targetValue / (duration / 16);
+                let currentValue = startValue;
+                
+                const timer = setInterval(() => {
+                    currentValue += increment;
+                    if (currentValue >= targetValue) {
+                        currentValue = targetValue;
+                        clearInterval(timer);
+                    }
+                    
+                    if (elementId.includes('dollars') || elementId.includes('raised')) {
+                        element.textContent = '$' + Math.floor(currentValue).toLocaleString();
+                    } else {
+                        element.textContent = Math.floor(currentValue).toLocaleString();
+                    }
+                }, 16);
+            }
+            
+            // Start counter animations
+            const impactCounters = document.querySelectorAll('.impact-counter');
+            impactCounters.forEach(counter => {
+                const text = counter.textContent.replace(/[$,]/g, '');
+                const value = parseInt(text);
+                if (!isNaN(value)) {
+                    counter.textContent = '0';
+                    animateCounter(counter.id || 'counter', value);
+                }
+            });
+        });
+        
+        // Add CSS for filter buttons
+        const style = document.createElement('style');
+        style.textContent = `
+            .filter-btn {
+                @apply px-4 py-2 rounded-lg border border-gray-300 text-text-secondary hover:border-primary hover:text-primary transition-all duration-300 flex items-center text-sm font-medium;
+            }
+            .filter-btn.active {
+                @apply bg-primary text-white border-primary;
+            }
+            .time-filter, .region-filter, .cause-filter {
+                @apply px-4 py-2 rounded-lg border border-gray-300 text-text-secondary focus:border-primary focus:ring-1 focus:ring-primary text-sm;
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+<script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+</body>
+</html>

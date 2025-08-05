@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Join InternImpact - Start Your Impact Journey</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Finternimpa1369back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.6"></script>
+</head>
+<body class="bg-background min-h-screen">
+    <!-- Navigation Header -->
+    <nav class="bg-surface shadow-sm border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="/" class="flex items-center space-x-2">
+                        
+                        <span class="text-xl font-bold text-primary font-accent">Hellointern</span>
+                    </a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                  <a href="/" class="text-text-secondary hover:text-primary transition-smooth">Home</a>
+                     <a href="intern_dashboard.html" class="text-primary font-semibold">Dashboard</a>
+                    <a href="/leaderboard" class="text-text-secondary hover:text-primary transition-smooth">Leaderboard</a>
+                </div>
+                
+                <!-- Back to Home -->
+                <div class="flex items-center">
+                    <a href="/" class="text-primary hover:text-primary-700 font-semibold transition-smooth">
+                        ← Back to Home
+                    </a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button class="text-gray-500 hover:text-primary">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Authentication Container -->
+    <div class="min-h-screen bg-gradient-to-br from-primary-50 to-secondary-50 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl w-full">
+            
+
+            <!-- Centered Authentication Card Without Background Color -->
+            <div class="flex items-center justify-center min-h-[60vh]">
+                <div class="w-full max-w-xl">
+                    <!-- Intern Signup Section -->
+                    <div class="card-elevated border border-primary-200 p-8 rounded-lg shadow-lg">
+                        <div class="text-center mb-6">
+                            <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                                </svg>
+                            </div>
+                            <h2 class="text-2xl font-bold text-primary mb-2 font-accent">Join as Intern</h2>
+                            <p class="text-text-secondary">Launch your career while driving social impact</p>
+                        </div>
+
+                        <!-- Social Login Options -->
+                        <div class="space-y-3 mb-6">
+                            <button class="w-full flex items-center justify-center px-4 py-3 border border-gray-300 rounded-lg bg-white hover:bg-gray-50 transition-smooth">
+                                <img src="https://developers.google.com/identity/images/g-logo.png" alt="Google" class="w-5 h-5 mr-3" />
+                                <span class="text-sm font-semibold text-gray-700">Continue with Google</span>
+                            </button>
+                            <button class="w-full flex items-center justify-center px-4 py-3 border border-gray-300 rounded-lg bg-white hover:bg-gray-50 transition-smooth">
+                                <svg class="w-5 h-5 mr-3 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                </svg>
+                                <span class="text-sm font-semibold text-gray-700">Continue with LinkedIn</span>
+                            </button>
+                            <button class="w-full flex items-center justify-center px-4 py-3 border border-gray-300 rounded-lg bg-white hover:bg-gray-50 transition-smooth">
+                                <svg class="w-5 h-5 mr-3 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                </svg>
+                                <span class="text-sm font-semibold text-gray-700">Continue with Facebook</span>
+                            </button>
+                        </div>
+
+                        <!-- Divider -->
+                        <div class="relative mb-6">
+                            <div class="absolute inset-0 flex items-center">
+                                <div class="w-full border-t border-gray-300"></div>
+                            </div>
+                            <div class="relative flex justify-center text-sm">
+                                <span class="px-2 bg-white text-text-secondary">or continue with email</span>
+                            </div>
+                        </div>
+
+                        <!-- Email Signup Form -->
+                        <form class="space-y-4" id="internSignupForm">
+                            <div>
+                                <label for="intern-email" class="block text-sm font-medium text-text-primary mb-1">Email Address</label>
+                                <input type="email" id="intern-email" name="email" required class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-smooth" placeholder="your.email@university.edu" />
+                            </div>
+                            <div>
+                                <label for="intern-password" class="block text-sm font-medium text-text-primary mb-1">Password</label>
+                                <input type="password" id="intern-password" name="password" required class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-smooth" placeholder="Create a strong password" />
+                            </div>
+                            <div>
+                                <label for="intern-name" class="block text-sm font-medium text-text-primary mb-1">Full Name</label>
+                                <input type="text" id="intern-name" name="name" required class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-smooth" placeholder="Your full name" />
+                            </div>
+                            <div>
+                                <label for="intern-university" class="block text-sm font-medium text-text-primary mb-1">University/Company</label>
+                                <input type="text" id="intern-university" name="university" required class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-smooth" placeholder="Your school or workplace" />
+                            </div>
+                            
+                            <!-- Terms Agreement -->
+                            <div class="flex items-start space-x-2">
+                                <input type="checkbox" id="intern-terms" name="terms" required class="mt-1 h-4 w-4 text-primary focus:ring-primary border-gray-300 rounded" />
+                                <label for="intern-terms" class="text-sm text-text-secondary">
+                                    I agree to the <a href="#" class="text-primary hover:text-primary-700">Terms of Service</a> 
+                                    and <a href="#" class="text-primary hover:text-primary-700">Privacy Policy</a>
+                                </label>
+                            </div>
+                            
+                            <button type="submit" class="w-full btn-primary text-lg py-3">
+                                Start Your Impact Journey
+                                <svg class="w-5 h-5 ml-2 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                                </svg>
+                            </button>
+                        </form>
+
+                        <!-- Login Link -->
+                        <div class="text-center mt-4">
+                            <p class="text-sm text-text-secondary">
+                                Already have an account? 
+                                <button onclick="showLoginForm('intern')" class="text-primary hover:text-primary-700 font-semibold">Sign In</button>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    <!-- Login Modal Overlay -->
+    <div id="loginModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-surface rounded-lg shadow-elevated max-w-md w-full p-6">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-xl font-bold text-text-primary font-accent">Welcome Back</h3>
+                <button onclick="hideLoginForm()" class="text-gray-400 hover:text-gray-600">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+            
+            <form class="space-y-4" action="/signin" method="POST">
+                <div>
+                    <label for="login-email" class="block text-sm font-medium text-text-primary mb-1">Email Address</label>
+                    <input type="email" id="login-email" name="email" required class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-smooth" placeholder="your.email@example.com" />
+                </div>
+                <div>
+                    <label for="login-password" class="block text-sm font-medium text-text-primary mb-1">Password</label>
+                    <input type="password" id="login-password" name="password" required class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-smooth" placeholder="Enter your password" />
+                </div>
+                
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center">
+                        <input type="checkbox" id="remember-me" name="remember" class="h-4 w-4 text-primary focus:ring-primary border-gray-300 rounded" />
+                        <label for="remember-me" class="ml-2 text-sm text-text-secondary">Remember me</label>
+                    </div>
+                    <a href="#" class="text-sm text-primary hover:text-primary-700">Forgot password?</a>
+                </div>
+                
+                <button type="submit" class="w-full btn-primary">
+                    Sign In
+                </button>
+            </form>
+            
+            <div class="mt-4 text-center">
+                <p class="text-sm text-text-secondary">
+                    Don't have an account? 
+                    <button onclick="hideLoginForm()" class="text-primary hover:text-primary-700 font-semibold">Sign up here</button>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript for Form Handling -->
+    <script>
+        // Show login form
+        function showLoginForm(userType) {
+            document.getElementById('loginModal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        // Hide login form
+        function hideLoginForm() {
+            document.getElementById('loginModal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+        
+        // Handle intern signup
+        document.getElementById('internSignupForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Simulate successful signup
+            setTimeout(() => {
+                alert('Welcome to InternImpact! Redirecting to your dashboard...');
+                window.location.href = 'intern_dashboard.html';
+            }, 1000);
+        });
+        
+        // Handle donor signup
+        // document.getElementById('donorSignupForm').addEventListener('submit', function(e) {
+//e.preventDefault();
+            
+            // Simulate successful signup
+        //    setTimeout(() => {
+        //        alert('Welcome to InternImpact! Redirecting to browse campaigns...');
+         //       window.location.href = 'campaign_profiles.html';
+         //   }, 1000);
+      //  });
+        
+        // Handle login
+    router.post('/signin', async (req, res) => {
+  const { email, password } = req.body;
+
+  try {
+    const intern = await userHelpers.getInternByEmail(email);
+
+    if (!intern) {
+      return res.json({ status: false, message: 'User not found' });
+    }
+
+    if (intern.password !== password) {
+      return res.json({ status: false, message: 'Invalid password' });
+    }
+
+    // ✅ Save session
+    req.session.intern = {
+      name: intern.name,
+      email: intern.email
+    };
+
+    console.log('Intern session set:', req.session.intern);
+
+    return res.json({ status: true, message: 'Login successful' });
+
+  } catch (err) {
+    console.error(err);
+    return res.status(500).json({ status: false, message: 'Internal server error' });
+  }
+});
+
+        
+        // Close modal when clicking outside
+        document.getElementById('loginModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                hideLoginForm();
+            }
+        });
+        
+        // Form validation feedback
+        const inputs = document.querySelectorAll('input[required]');
+        inputs.forEach(input => {
+            input.addEventListener('blur', function() {
+                if (this.value.trim() === '') {
+                    this.classList.add('border-error');
+                    this.classList.remove('border-gray-300');
+                } else {
+                    this.classList.remove('border-error');
+                    this.classList.add('border-gray-300');
+                }
+            });
+            
+            input.addEventListener('input', function() {
+                if (this.value.trim() !== '') {
+                    this.classList.remove('border-error');
+                    this.classList.add('border-gray-300');
+                }
+            });
+        });
+        
+        // Password strength indicator
+        const passwordInputs = document.querySelectorAll('input[type="password"]');
+        passwordInputs.forEach(input => {
+            input.addEventListener('input', function() {
+                const strength = calculatePasswordStrength(this.value);
+                // You could add visual feedback here
+            });
+        });
+        
+        function calculatePasswordStrength(password) {
+            let strength = 0;
+            if (password.length >= 8) strength++;
+            if (/[A-Z]/.test(password)) strength++;
+            if (/[a-z]/.test(password)) strength++;
+            if (/[0-9]/.test(password)) strength++;
+            if (/[^A-Za-z0-9]/.test(password)) strength++;
+            return strength;
+        }
+        
+        // Auto-focus first input on page load
+        window.addEventListener('load', function() {
+            const firstInput = document.querySelector('input[type="email"]');
+            if (firstInput) {
+                firstInput.focus();
+            }
+        });
+
+
+        document.getElementById("internSignupForm").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    
+    const formData = {
+        email: document.getElementById("intern-email").value,
+        password: document.getElementById("intern-password").value,
+        name: document.getElementById("intern-name").value,
+        university: document.getElementById("intern-university").value,
+    };
+
+    try {
+        const res = await fetch("/signup", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(formData),
+        });
+
+        const data = await res.json();
+        alert(data.message);
+    } catch (err) {
+        console.error(err);
+        alert("Something went wrong!");
+    }
+});
+
+    </script>
+<script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+</body>
+</html>
